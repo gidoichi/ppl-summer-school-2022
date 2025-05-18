@@ -3,7 +3,7 @@ let john = "john" ;;
 let mary = "mary" ;;
 let love obj sbj = "love(" ^ sbj ^ ", " ^ obj ^ ")" ;;
 let know obj sbj = "know(" ^ sbj ^ ", " ^ obj ^ ")" ;;
-let everyone x = ... ;;
+let everyone x = shift (fun k -> "forall " ^ x ^ ". " ^ k x) ;;
 
 (* テスト *)
 (* John loves everyone *)

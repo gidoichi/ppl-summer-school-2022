@@ -34,9 +34,9 @@ let start tree =
 let same_fringe tree1 tree2 =
   let rec loop r1 r2 = 
     match (r1, r2) with
-      (Done, Done) -> ...
-    | (Next (n1, k1), Next (n2, k2)) -> ...
-    | _ -> ... in
+      (Done, Done) -> true
+    | (Next (n1, k1), Next (n2, k2)) -> if n1 = n2 then loop (k1 ()) (k2 ()) else false
+    | _ -> false in
   loop (start tree1) (start tree2) ;;
 
 (* テスト *)

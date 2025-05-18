@@ -1,5 +1,5 @@
 (* 計算を true と false で実行した結果をペアとして返す *)
-let flip () = ... ;;
+let flip () = shift (fun k -> (k true, k false)) ;;
 
 (* テスト *)
 let test1 = 
